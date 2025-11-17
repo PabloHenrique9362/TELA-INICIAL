@@ -86,10 +86,10 @@ body {
     position: absolute;
     z-index: 1;
     top: -4px;
+    animation: slide-back 0.3s;
 }
 .Light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.3s forwards;
 }
 ul {
     padding-top: 30px;
@@ -137,3 +137,20 @@ footer {
     text-align: center;
     padding: 24px 0;
 }
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+    to {
+        left: 50%;
+    }
+}
+@keyframes slide-back {
+    from {
+        right: 0;
+    }
+    to {
+        right: 50%;
+    }    
+}
+
